@@ -1,0 +1,19 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## 25th September 2019
+```{r, echo=FALSE}
+library(leaflet)
+Ashiya <- data.frame(lat = c(34.727), lng = c(135.304))
+
+Ashiya %>% 
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers()
+```
